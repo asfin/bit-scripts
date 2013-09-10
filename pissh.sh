@@ -1,5 +1,5 @@
 #!/bin/sh
-ssh -t -o StrictHostKeyChecking=no pi@10.10.10.$1 "\
+ssh -t -o StrictHostKeyChecking=no -o IdentityFile=~/.ssh/id_rsa_cg pi@10.10.10.$1 "\
 perl -e '
   @res = \`sudo ifconfig eth0\`;
   for (@res) {
