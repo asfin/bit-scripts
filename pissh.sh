@@ -10,5 +10,5 @@ perl -e '
   @ar = split(/\./, \$IP);
   \$IP = \$ar[-1];
   \$IP = \".\$IP\";
-  print \"PS1=\\\"\$MAC->\$IP: \\\"\n\";
+  print \"PS1=\\\"\$MAC->\$IP: \\\[\\\033[01;34m\\\] \\\w \\\$\\\[\\\033[00m\\\] \\\"\n\";
 '>> .bashrc; bash; grep -v -P \"^PS1.*?->\" ~/.bashrc > .bashrc.ungr; mv .bashrc.ungr ~/.bashrc"
